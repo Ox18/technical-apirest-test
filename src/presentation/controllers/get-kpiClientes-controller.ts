@@ -10,7 +10,6 @@ export class GetKpiClientesController implements Controller {
 			const kpiClientes = await this.getKpiClientes.getKpi();
 			return ok(kpiClientes);
 		} catch (error) {
-			console.log(error);
 			return serverError(error);
 		}
 	}

@@ -12,7 +12,6 @@ class GetKpiClientesController {
             return (0, helpers_1.ok)(kpiClientes);
         }
         catch (error) {
-            console.log(error);
             return (0, helpers_1.serverError)(error);
         }
     }

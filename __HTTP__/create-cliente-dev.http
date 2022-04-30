@@ -4,6 +4,5 @@ content-type: application/json
 {
     "nombre": "Wilmer",
     "apellido": "Delgado",
-    "edad": 21,
     "fechaNacimiento": "{{$localDatetime '2000-11-09'}}"
 }

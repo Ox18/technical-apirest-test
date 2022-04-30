@@ -13,8 +13,18 @@ class UserMySQLRepository {
         return true;
     }
     async getAll(params) {
+        await mysql_helper_1.MySQLHelper.query("truncate table clientes");
         const sql = new query_builder_1.QueryBuilder().select("*").from(this.tableName).generate();
-        const result = await mysql_helper_1.MySQLHelper.query(sql);
+        let result = await mysql_helper_1.MySQLHelper.query(sql);
+        result.forEach((item) => {
+            const { edad, fechaNacimiento } = item;
+            // Calcular fecha de muerte de manera aleatoria
+            const edadMaximaDeHumano = 99;
+            const fechaMinima = new Date(fechaNacimiento);
+            const fechaMaxima = (edadMaximaDeHumano - edad) * 365 * 24 * 60 * 60 * 1000;
+            const fechaMuerte = new Date(fechaMinima.getTime() + fechaMaxima);
+            item.fechaMuerte = fechaMuerte;
+        });
         return result;
     }
     async getKpi() {
