@@ -1,8 +1,9 @@
-POST http://localhost:3000/api/clientes HTTP/1.1
+POST http://localhost:3000/api/creacliente HTTP/1.1
 content-type: application/json
 
 {
-    "nombre": "Paolo",
+    "nombre": "Wilmer",
     "apellido": "Delgado",
-    "edad": 30
+    "edad": 21,
+    "fechaNacimiento": "{{$localDatetime '2000-11-09'}}"
 }

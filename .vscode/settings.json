@@ -2,6 +2,9 @@
     "exportall.config.folderListener": [
         "/src/presentation/protocols",
         "/src/presentation/errors",
-        "/src/main/config"
+        "/src/main/config",
+        "/src/domain/usecases",
+        "/src/presentation/controllers",
+        "/src/main/factories/usecases"
     ]
 }

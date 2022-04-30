@@ -12,6 +12,19 @@ class UserMySQLRepository {
         await mysql_helper_1.MySQLHelper.query(sql);
         return true;
     }
+    async getAll(params) {
+        const sql = new query_builder_1.QueryBuilder().select("*").from(this.tableName).generate();
+        const result = await mysql_helper_1.MySQLHelper.query(sql);
+        return result;
+    }
+    async getKpi() {
+        const sql = new query_builder_1.QueryBuilder()
+            .select("AVG(edad) as promedio, STD(edad) as desviacionEstandar")
+            .from(this.tableName)
+            .generate();
+        const result = await mysql_helper_1.MySQLHelper.query(sql);
+        return result[0];
+    }
 }
 exports.UserMySQLRepository = UserMySQLRepository;
 //# sourceMappingURL=cliente-mysql-repository.js.map

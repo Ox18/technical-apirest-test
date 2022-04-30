@@ -15,4 +15,6 @@ var __exportStar = (this && this.__exportStar) || function(m, exports) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 __exportStar(require("./create-cliente-factory"), exports);
+__exportStar(require("./get-clientes-factory"), exports);
+__exportStar(require("./get-kpiClientes-factory"), exports);
 //# sourceMappingURL=index.js.map

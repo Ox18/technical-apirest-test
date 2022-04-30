@@ -1,0 +1,1 @@
+{"version":3,"file":"db-get-kpiClientes.js","sourceRoot":"","sources":["../../../src/data/usecases/db-get-kpiClientes.ts"],"names":[],"mappings":";;;AAGA,MAAa,gBAAgB;IAC5B,YACkB,wBAAkD;QAAlD,6BAAwB,GAAxB,wBAAwB,CAA0B;IACjE,CAAC;IAEJ,KAAK,CAAC,MAAM;QACX,MAAM,QAAQ,GAAG,MAAM,IAAI,CAAC,wBAAwB,CAAC,MAAM,EAAE,CAAC;QAC9D,OAAO,QAAQ,CAAC;IACjB,CAAC;CACD;AATD,4CASC"}
