@@ -1,7 +1,6 @@
 # Llatan - API Rest
 ## Prueba técnica
 
-<<<<<<< HEAD
 =======
 <img width="735" alt="image" src="https://user-images.githubusercontent.com/73305665/166167702-0031e1a1-7833-4c39-b408-65c5f314c4a5.png">
 
@@ -16,4 +15,3 @@ Para ver la documentación en *Swagger*:<br/> https://llatan-api-rest.herokuapp.
 | /creacliente | https://llatan-api-rest.herokuapp.com/api/creacliente |
 | /kpideclientes | https://llatan-api-rest.herokuapp.com/api/kpideclientes |
 | /listclientes | https://llatan-api-rest.herokuapp.com/api/listclientes |
->>>>>>> 1d87712c37e9d944c3b8ae9be59d035f0e63c967
