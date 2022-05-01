@@ -25,7 +25,7 @@ export class UserMySQLRepository
 	}
 
 	async getAll(params: GetClientes.Params): Promise<GetClientes.Result> {
-		await MySQLHelper.query("truncate table clientes");
+		// await MySQLHelper.query("truncate table clientes");
 		const sql = new QueryBuilder().select("*").from(this.tableName).generate();
 
 		let result = await MySQLHelper.query(sql);
@@ -35,12 +35,13 @@ export class UserMySQLRepository
 			// Calcular fecha de muerte de manera aleatoria
 			const edadMaximaDeHumano = 99;
 
-			const fechaMinima = new Date(fechaNacimiento);
-			const fechaMaxima =
-				(edadMaximaDeHumano - edad) * 365 * 24 * 60 * 60 * 1000;
-			const fechaMuerte = new Date(fechaMinima.getTime() + fechaMaxima);
+			// const fechaActualDeEdad = new Date()
+			// const fechaMinima = new Date(fechaNacimiento);
+			// const fechaMaxima =
+			// 	(edadMaximaDeHumano - edad) * 365 * 24 * 60 * 60 * 1000;
+			// const fechaMuerte = new Date(fechaMinima.getTime() + fechaMaxima);
 
-			item.fechaMuerte = fechaMuerte;
+			// item.fechaMuerte = fechaMuerte;
 		});
 
 		return result;

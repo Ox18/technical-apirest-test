@@ -2,8 +2,7 @@ POST https://llatan-api-rest.herokuapp.com/api/creacliente HTTP/1.1
 content-type: application/json
 
 {
-    "nombre": "Josue",
-    "apellido": "P.",
-    "edad": 30,
+    "nombre": "Wilmer",
+    "apellido": "Delgado",
     "fechaNacimiento": "{{$localDatetime '2000-06-07'}}"
 }
