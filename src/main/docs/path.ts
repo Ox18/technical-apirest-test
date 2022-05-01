@@ -1,6 +1,7 @@
-import { kpiClientesPath, listClientesPath } from "./paths";
+import { kpiClientesPath, listClientesPath, crearclientePath } from "./paths";
 
 export default {
 	"/kpideclientes": kpiClientesPath,
 	"/listclientes": listClientesPath,
+	"/creacliente": crearclientePath,
 };
