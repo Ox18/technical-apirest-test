@@ -8,6 +8,7 @@
         "/src/main/factories/usecases",
         "/src/main/docs/paths",
         "/src/main/docs/schemas",
-        "/src/utils"
+        "/src/utils",
+        "/src/validation/validators"
     ]
 }

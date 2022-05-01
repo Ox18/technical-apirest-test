@@ -14,8 +14,6 @@ var __exportStar = (this && this.__exportStar) || function(m, exports) {
     for (var p in m) if (p !== "default" && !Object.prototype.hasOwnProperty.call(exports, p)) __createBinding(exports, m, p);
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-__exportStar(require("./create-cliente-controller-factory"), exports);
-__exportStar(require("./create-cliente-validation-factory"), exports);
-__exportStar(require("./get-clientes-controller-factory"), exports);
-__exportStar(require("./get-kpiClientes-controller-factory"), exports);
+__exportStar(require("./required-field-validation"), exports);
+__exportStar(require("./validation-composite"), exports);
 //# sourceMappingURL=index.js.map
