@@ -6,9 +6,9 @@ class GetClientesController {
     constructor(getClientes) {
         this.getClientes = getClientes;
     }
-    async handle(request) {
+    async handle() {
         try {
-            const clientes = await this.getClientes.getAll(request);
+            const clientes = await this.getClientes.getAll();
             return (0, helpers_1.ok)(clientes);
         }
         catch (error) {

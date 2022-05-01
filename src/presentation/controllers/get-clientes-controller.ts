@@ -5,9 +5,9 @@ import { GetClientes } from "@/domain/usecases";
 export class GetClientesController implements Controller {
 	constructor(private readonly getClientes: GetClientes) {}
 
-	async handle(request: GetClientesController.Request): Promise<HttpResponse> {
+	async handle(): Promise<HttpResponse> {
 		try {
-			const clientes = await this.getClientes.getAll(request);
+			const clientes = await this.getClientes.getAll();
 			return ok(clientes);
 		} catch (error) {
 			return serverError(error);

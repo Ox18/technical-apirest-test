@@ -4,4 +4,5 @@ export type ClienteModel = {
 	apellido: string;
 	edad: number;
 	fechaNacimiento: Date;
+	fechaMuerte?: Date;
 };

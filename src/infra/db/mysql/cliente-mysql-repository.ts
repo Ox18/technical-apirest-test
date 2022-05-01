@@ -7,6 +7,8 @@ import {
 } from "@/data/protocols/db";
 import { QueryBuilder } from "./query-builder";
 import { CreateCliente, GetClientes, GetKpiClientes } from "@/domain/usecases";
+import { CalcularFechaMuerte } from "@/utils";
+import { ClienteModel } from "@/domain/models";
 
 export class UserMySQLRepository
 	implements
@@ -24,24 +26,13 @@ export class UserMySQLRepository
 		return true;
 	}
 
-	async getAll(params: GetClientes.Params): Promise<GetClientes.Result> {
-		// await MySQLHelper.query("truncate table clientes");
-		const sql = new QueryBuilder().select("*").from(this.tableName).generate();
+	async getAll(): Promise<GetClientes.Result> {
+		const sql = new QueryBuilder().selectAll().from(this.tableName).generate();
 
 		let result = await MySQLHelper.query(sql);
 
-		result.forEach((item: any) => {
-			const { edad, fechaNacimiento } = item;
-			// Calcular fecha de muerte de manera aleatoria
-			const edadMaximaDeHumano = 99;
-
-			// const fechaActualDeEdad = new Date()
-			// const fechaMinima = new Date(fechaNacimiento);
-			// const fechaMaxima =
-			// 	(edadMaximaDeHumano - edad) * 365 * 24 * 60 * 60 * 1000;
-			// const fechaMuerte = new Date(fechaMinima.getTime() + fechaMaxima);
-
-			// item.fechaMuerte = fechaMuerte;
+		result.forEach((item: ClienteModel) => {
+			item.fechaMuerte = CalcularFechaMuerte(item.fechaNacimiento);
 		});
 
 		return result;

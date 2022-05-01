@@ -14,6 +14,8 @@ var __exportStar = (this && this.__exportStar) || function(m, exports) {
     for (var p in m) if (p !== "default" && !Object.prototype.hasOwnProperty.call(exports, p)) __createBinding(exports, m, p);
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-__exportStar(require("./calcularEdad"), exports);
-__exportStar(require("./calcularFechaMuerte"), exports);
+__exportStar(require("./cliente-mysql-repository"), exports);
+__exportStar(require("./mysql-config"), exports);
+__exportStar(require("./mysql-helper"), exports);
+__exportStar(require("./query-builder"), exports);
 //# sourceMappingURL=index.js.map

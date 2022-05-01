@@ -14,7 +14,7 @@ const forbidden = (error) => ({
 exports.forbidden = forbidden;
 const serverError = (error) => ({
     statusCode: 500,
-    body: new errors_1.ServerError(error.stack),
+    body: new errors_1.ServerError(error),
 });
 exports.serverError = serverError;
 const ok = (data) => ({

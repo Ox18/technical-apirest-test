@@ -5,8 +5,8 @@ class DbGetClientes {
     constructor(getClientesRepository) {
         this.getClientesRepository = getClientesRepository;
     }
-    async getAll(params) {
-        const response = await this.getClientesRepository.getAll(params);
+    async getAll() {
+        const response = await this.getClientesRepository.getAll();
         return response;
     }
 }

@@ -13,8 +13,10 @@ const adaptRoute = (controller) => {
             res.status(httpResponse.statusCode).json(httpResponse.body);
         }
         else {
+            console.log(httpResponse.body);
             res.status(httpResponse.statusCode).json({
-                error: httpResponse.body.message,
+                error: httpResponse.body.name,
+                message: httpResponse.body.message,
             });
         }
     };

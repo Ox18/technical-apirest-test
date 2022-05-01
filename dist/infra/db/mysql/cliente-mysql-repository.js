@@ -3,6 +3,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.UserMySQLRepository = void 0;
 const mysql_helper_1 = require("./mysql-helper");
 const query_builder_1 = require("./query-builder");
+const utils_1 = require("@/utils");
 class UserMySQLRepository {
     constructor() {
         this.tableName = "clientes";
@@ -12,18 +13,11 @@ class UserMySQLRepository {
         await mysql_helper_1.MySQLHelper.query(sql);
         return true;
     }
-    async getAll(params) {
-        await mysql_helper_1.MySQLHelper.query("truncate table clientes");
-        const sql = new query_builder_1.QueryBuilder().select("*").from(this.tableName).generate();
+    async getAll() {
+        const sql = new query_builder_1.QueryBuilder().selectAll().from(this.tableName).generate();
         let result = await mysql_helper_1.MySQLHelper.query(sql);
         result.forEach((item) => {
-            const { edad, fechaNacimiento } = item;
-            // Calcular fecha de muerte de manera aleatoria
-            const edadMaximaDeHumano = 99;
-            const fechaMinima = new Date(fechaNacimiento);
-            const fechaMaxima = (edadMaximaDeHumano - edad) * 365 * 24 * 60 * 60 * 1000;
-            const fechaMuerte = new Date(fechaMinima.getTime() + fechaMaxima);
-            item.fechaMuerte = fechaMuerte;
+            item.fechaMuerte = (0, utils_1.CalcularFechaMuerte)(item.fechaNacimiento);
         });
         return result;
     }
