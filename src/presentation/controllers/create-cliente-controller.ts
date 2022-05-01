@@ -1,7 +1,6 @@
 import { Controller, HttpResponse } from "@/presentation/protocols";
 import { serverError, ok } from "@/presentation/helpers";
 import { CreateCliente } from "@/domain/usecases";
-import { CalcularEdad } from "@/utils";
 
 export class CreateClienteController implements Controller {
 	constructor(private readonly createCliente: CreateCliente) {}
@@ -10,10 +9,7 @@ export class CreateClienteController implements Controller {
 		request: CreateClienteController.Request
 	): Promise<HttpResponse> {
 		try {
-			const cliente = await this.createCliente.create({
-				...request,
-				edad: CalcularEdad(new Date(request.fechaNacimiento)),
-			});
+			const cliente = await this.createCliente.create(request);
 			return ok(cliente);
 		} catch (error) {
 			console.log(error);
