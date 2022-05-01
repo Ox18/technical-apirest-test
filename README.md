@@ -1,7 +1,6 @@
 # Llatan - API Rest
 ## Prueba técnica
 
-=======
 <img width="735" alt="image" src="https://user-images.githubusercontent.com/73305665/166167702-0031e1a1-7833-4c39-b408-65c5f314c4a5.png">
 
 ## Solución
