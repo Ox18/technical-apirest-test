@@ -7,4 +7,4 @@ exports.default = (router) => {
     router.get("/listclientes", (0, adapters_1.adaptRoute)((0, controllers_1.makeGetClientesController)()));
     router.get("/kpideclientes", (0, adapters_1.adaptRoute)((0, controllers_1.makeGetKpiClientesController)()));
 };
-//# sourceMappingURL=clientes-routes.js.map
+//# sourceMappingURL=clientes.routes.js.map

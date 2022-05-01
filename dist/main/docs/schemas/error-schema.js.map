@@ -1,0 +1,1 @@
+{"version":3,"file":"error-schema.js","sourceRoot":"","sources":["../../../../src/main/docs/schemas/error-schema.ts"],"names":[],"mappings":";;;AAAa,QAAA,KAAK,GAAG;IACpB,IAAI,EAAE,QAAQ;IACd,UAAU,EAAE;QACX,KAAK,EAAE;YACN,IAAI,EAAE,QAAQ;SACd;QACD,OAAO,EAAE;YACR,IAAI,EAAE,QAAQ;SACd;KACD;IACD,QAAQ,EAAE,CAAC,OAAO,CAAC;CACnB,CAAC"}

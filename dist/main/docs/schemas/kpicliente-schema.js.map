@@ -1,0 +1,1 @@
+{"version":3,"file":"kpicliente-schema.js","sourceRoot":"","sources":["../../../../src/main/docs/schemas/kpicliente-schema.ts"],"names":[],"mappings":";;;AAAa,QAAA,UAAU,GAAG;IACzB,IAAI,EAAE,QAAQ;IACd,UAAU,EAAE;QACX,QAAQ,EAAE;YACT,IAAI,EAAE,QAAQ;SACd;QACD,kBAAkB,EAAE;YACnB,IAAI,EAAE,QAAQ;SACd;KACD;CACD,CAAC"}
