@@ -1,9 +1,9 @@
 export const listClientesPath = {
 	get: {
 		tags: ["clientes"],
-		summary: "API para obtener el KPI de clientes",
+		summary: "API para obtener la lista de clientes",
 		description:
-			"Obtener el promedio de edad entre todos los clientes y la desviación estándar de la misma",
+			"Lista de personas con todos los datos + fecha probable de muerte de cada una",
 		requestBody: {},
 		responses: {
 			200: {

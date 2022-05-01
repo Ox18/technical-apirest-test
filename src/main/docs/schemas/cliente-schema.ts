@@ -16,5 +16,10 @@ export const cliente = {
 		fechaNacimiento: {
 			type: "string",
 		},
+		fechaMuerte: {
+			type: "string",
+			description: "RFC3339 Datetime to set",
+			format: "date-time",
+		},
 	},
 };

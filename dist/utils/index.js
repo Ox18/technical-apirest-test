@@ -16,4 +16,5 @@ var __exportStar = (this && this.__exportStar) || function(m, exports) {
 Object.defineProperty(exports, "__esModule", { value: true });
 __exportStar(require("./calcularEdad"), exports);
 __exportStar(require("./calcularFechaMuerte"), exports);
+__exportStar(require("./fechaRandom"), exports);
 //# sourceMappingURL=index.js.map

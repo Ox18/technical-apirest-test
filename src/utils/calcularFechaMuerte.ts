@@ -1,4 +1,4 @@
-import { CalcularEdad } from "@/utils";
+import { CalcularEdad, FechaRandom } from "@/utils";
 
 export const CalcularFechaMuerte = (
 	fechaNacimiento: Date,
@@ -10,9 +10,12 @@ export const CalcularFechaMuerte = (
 		return new Date();
 	}
 
-	const fechaMinima = new Date(fechaNacimiento);
-	const fechaMaxima = (edadMaxima - edad) * 365 * 24 * 60 * 60 * 1000;
-	const fechaMuerte = new Date(fechaMinima.getTime() + fechaMaxima);
+	const fechaMinima = new Date(
+		fechaNacimiento.getTime() + edad * 365 * 24 * 60 * 60 * 1000
+	);
+	const fechaMaxima = new Date(
+		fechaNacimiento.getTime() + edadMaxima * 365 * 24 * 60 * 60 * 1000
+	);
 
-	return fechaMuerte;
+	return FechaRandom(fechaMinima, fechaMaxima);
 };

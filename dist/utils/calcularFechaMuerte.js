@@ -7,10 +7,9 @@ const CalcularFechaMuerte = (fechaNacimiento, edadMaxima = 99) => {
     if (edad > edadMaxima) {
         return new Date();
     }
-    const fechaMinima = new Date(fechaNacimiento);
-    const fechaMaxima = (edadMaxima - edad) * 365 * 24 * 60 * 60 * 1000;
-    const fechaMuerte = new Date(fechaMinima.getTime() + fechaMaxima);
-    return fechaMuerte;
+    const fechaMinima = new Date(fechaNacimiento.getTime() + edad * 365 * 24 * 60 * 60 * 1000);
+    const fechaMaxima = new Date(fechaNacimiento.getTime() + edadMaxima * 365 * 24 * 60 * 60 * 1000);
+    return (0, utils_1.FechaRandom)(fechaMinima, fechaMaxima);
 };
 exports.CalcularFechaMuerte = CalcularFechaMuerte;
 //# sourceMappingURL=calcularFechaMuerte.js.map

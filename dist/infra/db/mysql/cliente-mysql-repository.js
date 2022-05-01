@@ -27,7 +27,11 @@ class UserMySQLRepository {
             .from(this.tableName)
             .generate();
         const result = await mysql_helper_1.MySQLHelper.query(sql);
-        return result[0];
+        const { promedio = 0, desviacionEstandar = 0 } = result[0];
+        return {
+            promedio: Number(Number(promedio).toFixed(1)),
+            desviacionEstandar: Number(Number(desviacionEstandar).toFixed(1)),
+        };
     }
 }
 exports.UserMySQLRepository = UserMySQLRepository;

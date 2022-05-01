@@ -7,6 +7,7 @@
         "/src/presentation/controllers",
         "/src/main/factories/usecases",
         "/src/main/docs/paths",
-        "/src/main/docs/schemas"
+        "/src/main/docs/schemas",
+        "/src/utils"
     ]
 }
