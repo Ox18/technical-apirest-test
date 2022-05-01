@@ -2,7 +2,7 @@ export const kpiCliente = {
 	type: "object",
 	properties: {
 		promedio: {
-			type: "string",
+			type: "number",
 		},
 		desviacionEstandar: {
 			type: "number",
