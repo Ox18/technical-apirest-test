@@ -9,7 +9,7 @@ El microservicio ha sido desplegado en la nube de Heroku. <br />
 Se ha usado MySQL como base de datos.<br /> <br />
 Para ver la documentación en *Swagger*:<br/> https://llatan-api-rest.herokuapp.com/api-docs/
 
-| Ruta | README |
+| Ruta | URL |
 | ------ | ------ |
 | /creacliente | https://llatan-api-rest.herokuapp.com/api/creacliente |
 | /kpideclientes | https://llatan-api-rest.herokuapp.com/api/kpideclientes |
